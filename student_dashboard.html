@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal Dashboard</title>
+    <link rel="stylesheet" href="student_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="quick permit logo.jpeg" alt="Hostel Logo">
+                <h3>Quick Permit</h3>
+            </div>
+            <nav>
+                <a href="#home" class="nav-item active" data-section="home"><i class="fas fa-home"></i> Home</a>
+                <a href="#personal-info" class="nav-item" data-section="personal-info"><i class="fas fa-user"></i> Personal Info</a>
+                <a href="#payment-info" class="nav-item" data-section="payment-info"><i class="fas fa-money-bill"></i> Payment Info</a>
+                <a href="#mess-info" class="nav-item" data-section="mess-info"><i class="fas fa-utensils"></i> Mess Info</a>
+                <a href="#report-issue" class="nav-item" data-section="report-issue"><i class="fas fa-exclamation-circle"></i> Report an Issue</a>
+                <a href="#notices" class="nav-item" data-section="notices"><i class="fas fa-bell"></i> Notice</a>
+                <a href="#schedule" class="nav-item" data-section="schedule"><i class="fas fa-calendar-alt"></i> Schedule</a>
+                <a href="#contacts" class="nav-item" data-section="contacts"><i class="fas fa-phone"></i> Contact Details</a>
+                <a href="#logout" class="nav-item" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for anything...">
+                </div>
+                <div class="profile">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="vamsi photo.jpeg" alt="Profile">
+                    <div class="profile-info">
+                        <span class="name">Venkata Vamsi Krishna</span>
+                        <span class="details">1st Year | Room #311</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOME SECTION -->
+            <section id="home" class="content-section active">
+                <div class="welcome-banner">
+                    <div class="welcome-text">
+                        <h2>Welcome back, John!</h2>
+                        <p class="date-display"><span id="current-day"></span>, <span id="current-date"></span></p>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="welcome-illustration.png" alt="Welcome">
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <div class="icon"><i class="fas fa-plane-departure"></i></div>
+                            <h4>Apply Leave</h4>
+                            <p>Request a new leave</p>
+                            <a href="leaveapplication.html" class="action-btn">Apply Now</a>
+                        </div>
+                        <div class="action-card">
+                            <div class="icon"><i class="fas fa-history"></i></div>
+                            <h4>Leave History</h4>
+                            <p>View your past leaves</p>
+                            <a href="#" class="action-btn">View History</a>
+                        </div>
+                        <div class="action-card">
+                            <div class="icon"><i class="fas fa-clock"></i></div>
+                            <h4>Leave Status</h4>
+                            <p>Check pending requests</p>
+                            <a href="#" class="action-btn">Check Status</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leave-summary">
+                    <div class="summary-card">
+                        <h4>Leaves Available</h4>
+                        <div class="summary-value">11/25</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 56%;"></div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Recent Leave Status</h4>
+                        <div class="summary-value status pending">Pending</div>
+                        <p class="status-date">Requested on: 28 Apr 2025</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Next Holiday</h4>
+                        <div class="summary-value holiday">May 15</div>
+                        <p>Foundation Day</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-sections">
+                    <div class="notice-board">
+                        <div class="section-header">
+                            <h3>Notice Board</h3>
+                            <a href="#notices" class="view-all">View All</a>
+                        </div>
+                        <div class="notices-list">
+                            <div class="notice-item">
+                                <div class="notice-date">
+                                    <span class="day">02</span>
+                                    <span class="month">May</span>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Hostel Maintenance Schedule</h4>
+                                    <p>Plumbing work will be carried out on the 3rd floor on May 5th from 10 AM to 2 PM.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item">
+                                <div class="notice-date">
+                                    <span class="day">30</span>
+                                    <span class="month">Apr</span>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Mess Committee Meeting</h4>
+                                    <p>All mess committee members are requested to attend a meeting on May 3rd at 6 PM.</p>
+                                </div>
+                            </div>
+                            <div class="notice-item">
+                                <div class="notice-date">
+                                    <span class="day">25</span>
+                                    <span class="month">Apr</span>
+                                </div>
+                                <div class="notice-content">
+                                    <h4>Water Supply Interruption</h4>
+                                    <p>There will be no water supply on April 26th from 8 AM to 11 AM due to tank cleaning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="holiday-schedule">
+                        <div class="section-header">
+                            <h3>Upcoming Holidays</h3>
+                            <a href="#schedule" class="view-all">View Calendar</a>
+                        </div>
+                        <div class="holiday-list">
+                            <div class="holiday-item">
+                                <div class="holiday-date">May 15</div>
+                                <div class="holiday-name">Foundation Day</div>
+                            </div>
+                            <div class="holiday-item">
+                                <div class="holiday-date">May 22-23</div>
+                                <div class="holiday-name">College Annual Festival</div>
+                            </div>
+                            <div class="holiday-item">
+                                <div class="holiday-date">June 05</div>
+                                <div class="holiday-name">Environment Day</div>
+                            </div>
+                            <div class="holiday-item">
+                                <div class="holiday-date">June 15-30</div>
+                                <div class="holiday-name">Summer Break</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PERSONAL INFO SECTION -->
+            <section id="personal-info" class="content-section">
+                <div class="section-title">
+                    <h2>Personal Information</h2>
+                    <button class="edit-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                </div>
+
+                <div class="personal-info-content">
+                    <div class="profile-picture">
+                        <img src="vamsi photo.jpeg" alt="Profile Picture">
+                        <button class="change-pic-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    
+                    <div class="info-container">
+                        <div class="info-group">
+                            <h3>Basic Information</h3>
+                            <div class="info-row">
+                                <div class="info-label">Full Name</div>
+                                <div class="info-value">John Michael Doe</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Registration Number</div>
+                                <div class="info-value">2023BTCS042</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Email</div>
+                                <div class="info-value">john.doe@college.edu</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Contact Number</div>
+                                <div class="info-value">+91 9876543210</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Date of Birth</div>
+                                <div class="info-value">15 March 2003</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <h3>Academic Information</h3>
+                            <div class="info-row">
+                                <div class="info-label">Course</div>
+                                <div class="info-value">B.Tech in Computer Science</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Branch</div>
+                                <div class="info-value">Computer Science & Engineering</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Current Year</div>
+                                <div class="info-value">3rd Year</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Semester</div>
+                                <div class="info-value">6th Semester</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">CGPA</div>
+                                <div class="info-value">8.75</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <h3>Hostel Information</h3>
+                            <div class="info-row">
+                                <div class="info-label">Hostel Name</div>
+                                <div class="info-value">Block C</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Room Number</div>
+                                <div class="info-value">304</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Room Type</div>
+                                <div class="info-value">Double Sharing</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Roommate</div>
+                                <div class="info-value">Michael Johnson</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Warden</div>
+                                <div class="info-value">Dr. Sarah Williams</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <h3>Guardian Information</h3>
+                            <div class="info-row">
+                                <div class="info-label">Father's Name</div>
+                                <div class="info-value">Robert Doe</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Mother's Name</div>
+                                <div class="info-value">Jennifer Doe</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Guardian Contact</div>
+                                <div class="info-value">+91 9876543211</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Permanent Address</div>
+                                <div class="info-value">123, Green Avenue, Meadow Heights, New Delhi - 110001</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAYMENT INFO SECTION -->
+            <section id="payment-info" class="content-section">
+                <div class="section-title">
+                    <h2>Payment Information</h2>
+                </div>
+
+                <div class="payment-summary">
+                    <div class="summary-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Total Due</h3>
+                        <div class="amount">₹12,500</div>
+                        <p>Due Date: May 15, 2025</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Hostel Fee</h3>
+                        <div class="amount">₹8,000</div>
+                        <p>For Summer Semester</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Mess Fee</h3>
+                        <div class="amount">₹4,000</div>
+                        <p>For May-June 2025</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Other Charges</h3>
+                        <div class="amount">₹500</div>
+                        <p>Maintenance & Amenities</p>
+                    </div>
+                </div>
+
+                <div class="payment-actions">
+                    <button class="pay-now-btn">Pay Now</button>
+                    <button class="download-receipt-btn">Download Receipt</button>
+                </div>
+
+                <div class="payment-history">
+                    <div class="section-header">
+                        <h3>Payment History</h3>
+                        <div class="filter-options">
+                            <select id="payment-filter">
+                                <option value="all">All Payments</option>
+                                <option value="hostel">Hostel Fee</option>
+                                <option value="mess">Mess Fee</option>
+                                <option value="other">Other Charges</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="payment-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction ID</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01 Jan 2025</td>
+                                    <td>TXN123456789</td>
+                                    <td>Hostel Fee - Winter Semester</td>
+                                    <td>₹8,000</td>
+                                    <td><span class="status-badge paid">Paid</span></td>
+                                    <td><button class="receipt-btn">Receipt</button></td>
+                                </tr>
+                                <tr>
+                                    <td>01 Jan 2025</td>
+                                    <td>TXN123456790</td>
+                                    <td>Mess Fee - Jan-Feb 2025</td>
+                                    <td>₹4,000</td>
+                                    <td><span class="status-badge paid">Paid</span></td>
+                                    <td><button class="receipt-btn">Receipt</button></td>
+                                </tr>
+                                <tr>
+                                    <td>01 Mar 2025</td>
+                                    <td>TXN123456791</td>
+                                    <td>Mess Fee - Mar-Apr 2025</td>
+                                    <td>₹4,000</td>
+                                    <td><span class="status-badge paid">Paid</span></td>
+                                    <td><button class="receipt-btn">Receipt</button></td>
+                                </tr>
+                                <tr>
+                                    <td>01 Jan 2025</td>
+                                    <td>TXN123456792</td>
+                                    <td>Maintenance Charges</td>
+                                    <td>₹500</td>
+                                    <td><span class="status-badge paid">Paid</span></td>
+                                    <td><button class="receipt-btn">Receipt</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="fee-structure">
+                    <h3>Fee Structure</h3>
+                    <div class="fee-details">
+                        <div class="fee-item">
+                            <h4>Hostel Fee</h4>
+                            <div class="fee-description">
+                                <p><strong>Double Sharing:</strong> ₹8,000 per semester</p>
+                                <p><strong>Single Room:</strong> ₹12,000 per semester</p>
+                                <p><strong>AC Room (Additional):</strong> ₹4,000 per semester</p>
+                            </div>
+                        </div>
+                        <div class="fee-item">
+                            <h4>Mess Fee</h4>
+                            <div class="fee-description">
+                                <p><strong>Regular Meal Plan:</strong> ₹2,000 per month</p>
+                                <p><strong>Premium Meal Plan:</strong> ₹2,500 per month</p>
+                                <p><strong>Weekend Special:</strong> ₹200 per month (additional)</p>
+                            </div>
+                        </div>
+                        <div class="fee-item">
+                            <h4>Other Charges</h4>
+                            <div class="fee-description">
+                                <p><strong>Maintenance:</strong> ₹300 per semester</p>
+                                <p><strong>Internet:</strong> ₹100 per semester</p>
+                                <p><strong>Laundry Service:</strong> ₹500 per semester</p>
+                                <p><strong>Electricity (Additional usage):</strong> As per consumption</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MESS INFO SECTION -->
+            <section id="mess-info" class="content-section">
+                <div class="section-title">
+                    <h2>Mess Information</h2>
+                </div>
+
+                <div class="mess-timings">
+                    <h3>Mess Timings</h3>
+                    <div class="timings-container">
+                        <div class="timing-card">
+                            <div class="meal-icon breakfast"><i class="fas fa-coffee"></i></div>
+                            <h4>Breakfast</h4>
+                            <div class="time">7:00 AM - 9:30 AM</div>
+                        </div>
+                        <div class="timing-card">
+                            <div class="meal-icon lunch"><i class="fas fa-utensils"></i></div>
+                            <h4>Lunch</h4>
+                            <div class="time">12:00 PM - 2:30 PM</div>
+                        </div>
+                        <div class="timing-card">
+                            <div class="meal-icon snacks"><i class="fas fa-cookie"></i></div>
+                            <h4>Evening Snacks</h4>
+                            <div class="time">4:30 PM - 6:00 PM</div>
+                        </div>
+                        <div class="timing-card">
+                            <div class="meal-icon dinner"><i class="fas fa-moon"></i></div>
+                            <h4>Dinner</h4>
+                            <div class="time">7:30 PM - 10:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weekly-menu">
+                    <div class="section-header">
+                        <h3>Weekly Menu</h3>
+                        <div class="menu-controls">
+                            <button class="prev-week"><i class="fas fa-chevron-left"></i></button>
+                            <span class="current-week">May 1 - May 7, 2025</span>
+                            <button class="next-week"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="menu-tabs">
+                        <button class="menu-tab active" data-day="monday">Monday</button>
+                        <button class="menu-tab" data-day="tuesday">Tuesday</button>
+                        <button class="menu-tab" data-day="wednesday">Wednesday</button>
+                        <button class="menu-tab" data-day="thursday">Thursday</button>
+                        <button class="menu-tab" data-day="friday">Friday</button>
+                        <button class="menu-tab" data-day="saturday">Saturday</button>
+                        <button class="menu-tab" data-day="sunday">Sunday</button>
+                    </div>
+
+                    <div class="menu-content">
+                        <div class="menu-day active" id="monday-menu">
+                            <div class="menu-meals">
+                                <div class="menu-meal">
+                                    <h4><i class="fas fa-coffee"></i> Breakfast</h4>
+                                    <ul>
+                                        <li>Idli with Sambar</li>
+                                        <li>Coconut Chutney</li>
+                                        <li>Boiled Eggs / Banana</li>
+                                        <li>Tea / Coffee</li>
+                                    </ul>
+                                </div>
+                                <div class="menu-meal">
+                                    <h4><i class="fas fa-utensils"></i> Lunch</h4>
+                                    <ul>
+                                        <li>Plain Rice</li>
+                                        <li>Chapati</li>
+                                        <li>Dal Fry</li>
+                                        <li>Mixed Vegetable Curry</li>
+                                        <li>Curd</li>
+                                        <li>Salad</li>
+                                    </ul>
+                                </div>
+                                <div class="menu-meal">
+                                    <h4><i class="fas fa-cookie"></i> Snacks</h4>
+                                    <ul>
+                                        <li>Veg Sandwich</li>
+                                        <li>Tea / Coffee</li>
+                                    </ul>
+                                </div>
+                                <div class="menu-meal">
+                                    <h4><i class="fas fa-moon"></i> Dinner</h4>
+                                    <ul>
+                                        <li>Jeera Rice</li>
+                                        <li>Chapati</li>
+                                        <li>Paneer Butter Masala</li>
+                                        <li>Dal Tadka</li>
+                                        <li>Fruit Custard</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other days menus would follow similar structure -->
+                    </div>
+                </div>
+
+                <div class="mess-feedback">
+                    <h3>Mess Feedback</h3>
+                    <div class="feedback-form">
+                        <div class="form-group">
+                            <label>Rate today's food quality:</label>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Comments or Suggestions:</label>
+                            <textarea placeholder="Share your thoughts on mess food or service..."></textarea>
+                        </div>
+                        <button class="submit-feedback">Submit Feedback</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REPORT ISSUE SECTION -->
+            <section id="report-issue" class="content-section">
+                <div class="section-title">
+                    <h2>Report an Issue</h2>
+                </div>
+
+                <div class="issue-actions">
+                    <div class="new-issue">
+                        <h3>Report New Issue</h3>
+                        <form class="issue-form">
+                            <div class="form-group">
+                                <label>Issue Type:</label>
+                                <select id="issue-type">
+                                    <option value="">Select Issue Type</option>
+                                    <option value="plumbing">Plumbing Issue</option>
+                                    <option value="electrical">Electrical Issue</option>
+                                    <option value="furniture">Furniture Damage</option>
+                                    <option value="cleanliness">Cleanliness Issue</option>
+                                    <option value="wifi">Wi-Fi Problem</option>
+                                    <option value="security">Security Concern</option>
+                                    <option value="laundry">Laundry Service</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Location:</label>
+                                <input type="text" placeholder="e.g., Room 304, Bathroom, Corridor, etc.">
+                            </div>
+                            <div class="form-group">
+                                <label>Description:</label>
+                                <textarea placeholder="Describe the issue in detail..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Priority:</label>
+                                <div class="priority-options">
+                                    <label class="priority-option">
+                                        <input type="radio" name="priority" value="low">
+                                        <span>Low</span>
+                                    </label>
+                                    <label class="priority-option">
+                                        <input type="radio" name="priority" value="medium" checked>
+                                        <span>Medium</span>
+                                    </label>
+                                    <label class="priority-option">
+                                        <input type="radio" name="priority" value="high">
+                                        <span>High</span>
+                                    </label>
+                                    <label class="priority-option">
+                                        <input type="radio" name="priority" value="urgent">
+                                        <span>Urgent</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Upload Image (Optional):</label>
+                                <div class="file-upload">
+                                    <input type="file" id="issue-image" accept="image/*">
+                                    <label for="issue-image" class="file-upload-btn">
+                                        <i class="fas fa-cloud-upload-alt"></i> Choose Image
+                                    </label>
+                                    <div class="file-name">No file chosen</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-issue">Submit Issue</button>
+                        </form>
+                    </div>
+
+                    <div class="issue-history">
+                        <div class="section-header">
+                            <h3>Issue History</h3>
+                            <select id="issue-filter">
+                                <option value="all">All Issues</option>
+                                <option value="open">Open Issues</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="resolved">Resolved</option>
+                            </select>
+                        </div>
+                        
+                        <div class="issues-list">
+                            <div class="issue-item">
+                                <div class="issue-status in-progress">In Progress</div>
+                                <div class="issue-details">
+                                    <h4>Leaking Tap in Bathroom</h4>
+                                    <p class="issue-description">The bathroom sink tap is continuously dripping water.</p>
+                                    <div class="issue-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Room 304 - Bathroom</span>
+                                        <span><i class="fas fa-calendar"></i> Reported: April 29, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="issue-actions">
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                            
+                            <div class="issue-item">
+                                <div class="issue-status resolved">Resolved</div>
+                                <div class="issue-details">
+                                    <h4>Wi-Fi Connectivity Issue</h4>
+                                    <p class="issue-description">Unable to connect to hostel Wi-Fi network from room.</p>
+                                    <div class="issue-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Room 304</span>
+                                        <span><i class="fas fa-calendar"></i> Reported: April 15, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="issue-actions">
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                            
+                            <div class="issue-item">
+                                <div class="issue-status open">Open</div>
+                                <div class="issue-details">
+                                    <h4>Light Bulb Replacement</h4>
+                                    <p class="issue-description">Study table lamp is not working, needs replacement.</p>
+                                    <div class="issue-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Room 304</span>
+                                        <span><i class="fas fa-calendar"></i> Reported: May 01, 2025</span>
+                                    </div>
+                                </div>
+                                <div class="issue-actions">
+                                    <button class="view-details-btn">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-support">
+                    <h3>Chat with Support</h3>
+                    <div class="chat-container">
+                        <div class="chat-messages">
+                            <div class="message support">
+                                <div class="message-content">
+                                    <div class="message-sender">Support Team</div>
+                                    <div class="message-text">Hello John! How can we help you today?</div>
+                                    <div class="message-time">10:05 AM</div>
+                                </div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-content">
+                                    <div class="message-sender">You</div>
+                                    <div class="message-text">Hi, I wanted to check the status of my leaking tap issue.</div>
+                                    <div class="message-time">10:08 AM</div>
+                                </div>
+                            </div>
+                            <div class="message support">
+                                <div class="message-content">
+                                    <div class="message-sender">Support Team</div>
+                                    <div class="message-text">I can see that the maintenance team has scheduled a visit to your room today between 2PM - 4PM. Is that suitable for you?</div>
+                                    <div class="message-time">10:10 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type your message here...">
+                            <button class="send-button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOTICES SECTION -->
+            <section id="notices" class="content-section">
+                <div class="section-title">
+                    <h2>Notices & Announcements</h2>
+                </div>
+
+                <div class="notices-filter">
+                    <div class="filter-group">
+                        <label>Filter by:</label>
+                        <select id="notice-category">
+                            <option value="all">All Categories</option>
+                            <option value="general">General</option>
+                            <option value="academic">Academic</option>
+                            <option value="hostel">Hostel</option>
+                            <option value="mess">Mess</option>
+                            <option value="events">Events</option>
+                        </select>
+                    </div>
+                    <div class="search-notices">
+                        <input type="text" placeholder="Search notices...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="notices-grid">
+                    <div class="notice-card important">
+                        <div class="notice-header">
+                            <div class="notice-category">Hostel</div>
+                            <div class="notice-date">May 2, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Important: Hostel Maintenance Schedule</h3>
+                        <p class="notice-excerpt">Plumbing work will be carried out on the 3rd floor on May 5th from 10 AM to 2 PM. Students are requested to cooperate.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: Chief Warden</span>
+                        </div>
+                    </div>
+
+                    <div class="notice-card">
+                        <div class="notice-header">
+                            <div class="notice-category">Mess</div>
+                            <div class="notice-date">April 30, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Mess Committee Meeting</h3>
+                        <p class="notice-excerpt">All mess committee members are requested to attend a meeting on May 3rd at 6 PM in the mess hall to discuss the new menu options for next month.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: Mess Secretary</span>
+                        </div>
+                    </div>
+
+                    <div class="notice-card">
+                        <div class="notice-header">
+                            <div class="notice-category">General</div>
+                            <div class="notice-date">April 29, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Internet Maintenance</h3>
+                        <p class="notice-excerpt">The campus internet service will be down for maintenance on May 4th from 2 AM to the 5 AM. Plan your work accordingly.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: IT Services</span>
+                        </div>
+                    </div>
+
+                    <div class="notice-card">
+                        <div class="notice-header">
+                            <div class="notice-category">Events</div>
+                            <div class="notice-date">April 28, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Annual Cultural Night</h3>
+                        <p class="notice-excerpt">The annual cultural night will be held on May 15th in the college auditorium. Interested students can register for performances by May 10th.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: Cultural Committee</span>
+                        </div>
+                    </div>
+
+                    <div class="notice-card">
+                        <div class="notice-header">
+                            <div class="notice-category">Hostel</div>
+                            <div class="notice-date">April 25, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Water Supply Interruption</h3>
+                        <p class="notice-excerpt">There will be no water supply on April 26th from 8 AM to 11 AM due to tank cleaning. Please store water accordingly.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: Hostel Caretaker</span>
+                        </div>
+                    </div>
+
+                    <div class="notice-card">
+                        <div class="notice-header">
+                            <div class="notice-category">Academic</div>
+                            <div class="notice-date">April 22, 2025</div>
+                        </div>
+                        <h3 class="notice-title">Mid-Semester Examination Schedule</h3>
+                        <p class="notice-excerpt">The mid-semester examinations will commence from May 10th. The detailed schedule has been published on the college website.</p>
+                        <div class="notice-footer">
+                            <button class="read-more">Read More</button>
+                            <span class="notice-publisher">By: Examination Cell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notices-pagination">
+                    <button class="prev-page"><i class="fas fa-chevron-left"></i></button>
+                    <div class="page-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>8</button>
+                    </div>
+                    <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- SCHEDULE SECTION -->
+            <section id="schedule" class="content-section">
+                <div class="section-title">
+                    <h2>Hostel Schedule</h2>
+                </div>
+
+                <div class="daily-schedule">
+                    <h3>Daily Timings</h3>
+                    <div class="schedule-cards">
+                        <div class="schedule-card">
+                            <div class="time">6:00 AM</div>
+                            <div class="activity">
+                                <i class="fas fa-door-open"></i>
+                                <span>Hostel Gates Open</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card">
+                            <div class="time">7:00 AM - 9:30 AM</div>
+                            <div class="activity">
+                                <i class="fas fa-coffee"></i>
+                                <span>Breakfast Time</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card">
+                            <div class="time">12:00 PM - 2:30 PM</div>
+                            <div class="activity">
+                                <i class="fas fa-utensils"></i>
+                                <span>Lunch Time</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card">
+                            <div class="time">4:30 PM - 6:00 PM</div>
+                            <div class="activity">
+                                <i class="fas fa-cookie"></i>
+                                <span>Evening Snacks</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card">
+                            <div class="time">7:30 PM - 10:00 PM</div>
+                            <div class="activity">
+                                <i class="fas fa-moon"></i>
+                                <span>Dinner Time</span>
+                            </div>
+                        </div>
+                        <div class="schedule-card important">
+                            <div class="time">11:00 PM</div>
+                            <div class="activity">
+                                <i class="fas fa-door-closed"></i>
+                                <span>Hostel Gates Close</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-schedules">
+                    <h3>Special Timings</h3>
+                    <div class="special-schedule-items">
+                        <div class="special-item">
+                            <h4>Weekends</h4>
+                            <ul>
+                                <li><span class="time">7:30 AM - 10:30 AM</span> Breakfast (Extended)</li>
+                                <li><span class="time">12:30 PM - 3:00 PM</span> Lunch (Extended)</li>
+                                <li><span class="time">12:00 AM</span> Hostel Gates Close (Extended)</li>
+                            </ul>
+                        </div>
+                        <div class="special-item">
+                            <h4>Examination Period</h4>
+                            <ul>
+                                <li><span class="time">24 Hours</span> Study Rooms Open</li>
+                                <li><span class="time">All Night</span> Common Area Accessible</li>
+                                <li><span class="time">12:00 AM - 6:00 AM</span> Night Canteen Open</li>
+                            </ul>
+                        </div>
+                        <div class="special-item">
+                            <h4>Holidays</h4>
+                            <ul>
+                                <li><span class="time">8:00 AM - 11:00 AM</span> Breakfast (Extended)</li>
+                                <li><span class="time">1:00 PM - 3:30 PM</span> Lunch (Extended)</li>
+                                <li><span class="time">8:00 PM - 11:00 PM</span> Dinner (Extended)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="laundry-schedule">
+                    <h3>Laundry Schedule</h3>
+                    <div class="table-container">
+                        <table class="laundry-table">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Service Hours</th>
+                                    <th>Floor/Rooms</th>
+                                    <th>Collection Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>1st Floor (Rooms 101-120)</td>
+                                    <td>Next Day 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>2nd Floor (Rooms 201-220)</td>
+                                    <td>Next Day 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>3rd Floor (Rooms 301-320)</td>
+                                    <td>Next Day 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>4th Floor (Rooms 401-420)</td>
+                                    <td>Next Day 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>5th Floor (Rooms 501-520)</td>
+                                    <td>Next Day 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>10:00 AM - 2:00 PM</td>
+                                    <td>All Floors (Urgent Service)</td>
+                                    <td>Monday 4:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="gym-schedule">
+                    <h3>Gym Timings</h3>
+                    <div class="gym-timings">
+                        <div class="time-block">
+                            <h4>Morning</h4>
+                            <div class="time">6:00 AM - 9:00 AM</div>
+                        </div>
+                        <div class="time-block">
+                            <h4>Evening</h4>
+                            <div class="time">4:00 PM - 9:00 PM</div>
+                        </div>
+                        <div class="time-block">
+                            <h4>Weekends</h4>
+                            <div class="time">8:00 AM - 8:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT DETAILS SECTION -->
+            <section id="contacts" class="content-section">
+                <div class="section-title">
+                    <h2>Contact Details</h2>
+                </div>
+
+                <div class="emergency-contacts">
+                    <h3>Emergency Contacts</h3>
+                    <div class="contact-cards">
+                        <div class="contact-card emergency">
+                            <div class="contact-icon"><i class="fas fa-ambulance"></i></div>
+                            <h4>Medical Emergency</h4>
+                            <div class="contact-number">9876543210</div>
+                            <p>Campus Medical Center</p>
+                            <button class="call-now">Call Now</button>
+                        </div>
+                        <div class="contact-card emergency">
+                            <div class="contact-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                            <h4>Fire Emergency</h4>
+                            <div class="contact-number">9876543211</div>
+                            <p>Campus Fire Safety</p>
+                            <button class="call-now">Call Now</button>
+                        </div>
+                        <div class="contact-card emergency">
+                            <div class="contact-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Security</h4>
+                            <div class="contact-number">9876543212</div>
+                            <p>Campus Security Office</p>
+                            <button class="call-now">Call Now</button>
+                        </div>
+                        <div class="contact-card emergency">
+                            <div class="contact-icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4>Ambulance</h4>
+                            <div class="contact-number">102</div>
+                            <p>City Emergency Services</p>
+                            <button class="call-now">Call Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hostel-administration">
+                    <h3>Hostel Administration</h3>
+                    <div class="admin-cards">
+                        <div class="admin-card">
+                            <div class="admin-photo">
+                                <img src="vamsi friend.jpeg" alt="Chief Warden">
+                            </div>
+                            <div class="admin-info">
+                                <h4>Dr. Sarah Williams</h4>
+                                <p class="designation">Chief Warden</p>
+                                <p class="contact"><i class="fas fa-phone"></i> 9876543213</p>
+                                <p class="contact"><i class="fas fa-envelope"></i> sarah.williams@college.edu</p>
+                                <p class="office">Office: Admin Block, Room 12</p>
+                                <p class="timings">Office Hours: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="admin-card">
+                            <div class="admin-photo">
+                                <img src="uday brother.jpeg" alt="Deputy Warden">
+                            </div>
+                            <div class="admin-info">
+                                <h4>Dr. Robert Johnson</h4>
+                                <p class="designation">Deputy Warden</p>
+                                <p class="contact"><i class="fas fa-phone"></i> 9876543214</p>
+                                <p class="contact"><i class="fas fa-envelope"></i> robert.johnson@college.edu</p>
+                                <p class="office">Office: Hostel C, Ground Floor</p>
+                                <p class="timings">Office Hours: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="admin-card">
+                            <div class="admin-photo">
+                                <img src="udayalludu.jpeg" alt="Hostel Manager">
+                            </div>
+                            <div class="admin-info">
+                                <h4>Mr. David Smith</h4>
+                                <p class="designation">Hostel Manager</p>
+                                <p class="contact"><i class="fas fa-phone"></i> 9876543215</p>
+                                <p class="contact"><i class="fas fa-envelope"></i> david.smith@college.edu</p>
+                                <p class="office">Office: Hostel C, Room 001</p>
+                                <p class="timings">Office Hours: 24/7 (Shifts)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-contacts">
+                    <h3>Service Contacts</h3>
+                    <div class="table-container">
+                        <table class="service-table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Contact Person</th>
+                                    <th>Phone Number</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-wrench"></i> Maintenance</td>
+                                    <td>Mr. Ravi Kumar</td>
+                                    <td>9876543216</td>
+                                    <td>9:00 AM - 6:00 PM (Mon-Sat)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-wifi"></i> Internet Services</td>
+                                    <td>IT Helpdesk</td>
+                                    <td>9876543217</td>
+                                    <td>24/7 Support</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-tshirt"></i> Laundry Service</td>
+                                    <td>Mr. Vijay Sharma</td>
+                                    <td>9876543218</td>
+                                    <td>9:00 AM - 5:00 PM (Mon-Sat)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-utensils"></i> Mess Manager</td>
+                                    <td>Mrs. Lata Patel</td>
+                                    <td>9876543219</td>
+                                    <td>7:00 AM - 10:00 PM (Daily)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-broom"></i> Housekeeping</td>
+                                    <td>Mr. Suresh</td>
+                                    <td>9876543220</td>
+                                    <td>8:00 AM - 4:00 PM (Daily)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-toolbox"></i> Electrical Services</td>
+                                    <td>Mr. Anil Verma</td>
+                                    <td>9876543221</td>
+                                    <td>9:00 AM - 6:00 PM (Mon-Sat)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="nearby-services">
+                    <h3>Nearby Services</h3>
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h4>Stationery Shop</h4>
+                            <p>Located near the Academic Block</p>
+                            <p>Contact: 9876543222</p>
+                            <p>Timings: 9:00 AM - 8:00 PM</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-pills"></i></div>
+                            <h4>Medical Store</h4>
+                            <p>Near the Main Gate</p>
+                            <p>Contact: 9876543223</p>
+                            <p>Timings: 8:00 AM - 10:00 PM</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-bicycle"></i></div>
+                            <h4>Bicycle Rental</h4>
+                            <p>Near Hostel A</p>
+                            <p>Contact: 9876543224</p>
+                            <p>Timings: 7:00 AM - 9:00 PM</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-print"></i></div>
+                            <h4>Printing & Xerox</h4>
+                            <p>Behind Library Building</p>
+                            <p>Contact: 9876543225</p>
+                            <p>Timings: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirm Logout</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to logout from your account?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancel</button>
+                <a href="studentlogin.html" class="confirm-logout">Logout</a>
+            </div>
+        </div>
+    </div>
+    <script src="student_dashboard.js"></script>
+</body>
+</html>

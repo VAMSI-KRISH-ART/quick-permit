@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="warden_dashboard.css">
+    <title>Warden Dashboard</title>
+</head>
+<body>
+    <!-- Header Section with Search Bar and Profile -->
+    <header>
+        <div class="logo">
+            <h1>Hostel Management System</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+        <div class="profile">
+            <span>Welcome, Warden Name</span>
+            <img src="vamsi friend.jpeg" alt="Warden Profile Picture">
+        </div>
+    </header>
+
+    <!-- Main Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#personal-info">Personal Info</a></li>
+            <li><a href="#payment-info">Payment Info</a></li>
+            <li><a href="#mess-info">Mess Info</a></li>
+            <li><a href="#report-issue">Report an Issue</a></li>
+            <li><a href="#notice">Notice</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact Details</a></li>
+            <li><a href="#logout" id="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="welcome-banner">
+                <h2>Welcome to Warden Dashboard</h2>
+                <p id="current-date-time">Saturday, May 03, 2025</p>
+            </div>
+            
+            <div class="leave-management">
+                <h3>Leave Management</h3>
+                <button>Manage Leave Applications</button>
+                <div class="today-leave">
+                    <h4>Today's Leave History</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Room No</th>
+                                <th>Leave Type</th>
+                                <th>Duration</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ST001</td>
+                                <td>John Doe</td>
+                                <td>A-101</td>
+                                <td>Medical</td>
+                                <td>3 days</td>
+                                <td>Pending</td>
+                                <td>
+                                    <button>Approve</button>
+                                    <button>Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ST002</td>
+                                <td>Jane Smith</td>
+                                <td>B-202</td>
+                                <td>Personal</td>
+                                <td>1 day</td>
+                                <td>Approved</td>
+                                <td>
+                                    <button disabled>Approve</button>
+                                    <button disabled>Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="leave-status">
+                    <h4>Leave Status Overview</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Pending</th>
+                                <th>Approved</th>
+                                <th>Rejected</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>May 03, 2025</td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>May 02, 2025</td>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>1</td>
+                                <td>11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="notice-board">
+                <h3>Notice Board</h3>
+                <div class="notice-item">
+                    <h4>Important: Campus Maintenance</h4>
+                    <p>Water supply will be interrupted on May 5th from 10 AM to 2 PM due to maintenance work.</p>
+                    <small>Posted: May 2, 2025</small>
+                </div>
+                <div class="notice-item">
+                    <h4>Hostel Inspection</h4>
+                    <p>Monthly hostel inspection will be conducted on May 7th. Please ensure your rooms are clean and tidy.</p>
+                    <small>Posted: May 1, 2025</small>
+                </div>
+            </div>
+            
+            <div class="upcoming-holidays">
+                <h3>Upcoming Holidays</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>Holiday</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>May 12, 2025</td>
+                            <td>Monday</td>
+                            <td>Memorial Day</td>
+                            <td>National</td>
+                        </tr>
+                        <tr>
+                            <td>May 25, 2025</td>
+                            <td>Sunday</td>
+                            <td>Foundation Day</td>
+                            <td>Institutional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Personal Info Section -->
+        <section id="personal-info" class="content-section">
+            <h2>Personal Information</h2>
+            <div class="warden-info">
+                <div class="profile-picture">
+                    <img src="vamsi friend.jpeg" alt="Warden Profile Picture">
+                </div>
+                <div class="details">
+                    <table>
+                        <tr>
+                            <th>Name:</th>
+                            <td>Dr. Robert Johnson</td>
+                        </tr>
+                        <tr>
+                            <th>ID:</th>
+                            <td>WD-001</td>
+                        </tr>
+                        <tr>
+                            <th>Designation:</th>
+                            <td>Chief Warden</td>
+                        </tr>
+                        <tr>
+                            <th>Department:</th>
+                            <td>Student Affairs</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>robert.johnson@university.edu</td>
+                        </tr>
+                        <tr>
+                            <th>Phone:</th>
+                            <td>+1-234-567-8901</td>
+                        </tr>
+                        <tr>
+                            <th>Address:</th>
+                            <td>Warden Quarters, University Campus</td>
+                        </tr>
+                        <tr>
+                            <th>Joined Date:</th>
+                            <td>January 15, 2020</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="edit-profile">
+                <button>Edit Profile</button>
+                <button>Change Password</button>
+            </div>
+        </section>
+
+        <!-- Payment Info Section -->
+        <section id="payment-info" class="content-section">
+            <h2>Payment Information</h2>
+            <div class="payment-summary">
+                <div class="payment-card">
+                    <h3>Hostel Fee</h3>
+                    <div class="payment-stats">
+                        <div>
+                            <span>Total Students:</span>
+                            <span>200</span>
+                        </div>
+                        <div>
+                            <span>Paid:</span>
+                            <span>180</span>
+                        </div>
+                        <div>
+                            <span>Pending:</span>
+                            <span>20</span>
+                        </div>
+                        <div>
+                            <span>Collection Rate:</span>
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-card">
+                    <h3>Mess Fee</h3>
+                    <div class="payment-stats">
+                        <div>
+                            <span>Total Students:</span>
+                            <span>200</span>
+                        </div>
+                        <div>
+                            <span>Paid:</span>
+                            <span>175</span>
+                        </div>
+                        <div>
+                            <span>Pending:</span>
+                            <span>25</span>
+                        </div>
+                        <div>
+                            <span>Collection Rate:</span>
+                            <span>87.5%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-card">
+                    <h3>Other Charges</h3>
+                    <div class="payment-stats">
+                        <div>
+                            <span>Total Students:</span>
+                            <span>200</span>
+                        </div>
+                        <div>
+                            <span>Paid:</span>
+                            <span>190</span>
+                        </div>
+                        <div>
+                            <span>Pending:</span>
+                            <span>10</span>
+                        </div>
+                        <div>
+                            <span>Collection Rate:</span>
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-details">
+                <h3>Detailed Payment Information</h3>
+                <div class="filter-options">
+                    <label>
+                        Filter by:
+                        <select>
+                            <option>All</option>
+                            <option>Hostel Fee</option>
+                            <option>Mess Fee</option>
+                            <option>Other Charges</option>
+                        </select>
+                    </label>
+                    <label>
+                        Status:
+                        <select>
+                            <option>All</option>
+                            <option>Paid</option>
+                            <option>Pending</option>
+                        </select>
+                    </label>
+                    <button>Apply Filter</button>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Room No</th>
+                            <th>Fee Type</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Payment Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ST001</td>
+                            <td>John Doe</td>
+                            <td>A-101</td>
+                            <td>Hostel Fee</td>
+                            <td>$500</td>
+                            <td>Apr 30, 2025</td>
+                            <td>Paid</td>
+                            <td>Apr 28, 2025</td>
+                        </tr>
+                        <tr>
+                            <td>ST002</td>
+                            <td>Jane Smith</td>
+                            <td>B-202</td>
+                            <td>Mess Fee</td>
+                            <td>$200</td>
+                            <td>Apr 30, 2025</td>
+                            <td>Paid</td>
+                            <td>Apr 25, 2025</td>
+                        </tr>
+                        <tr>
+                            <td>ST003</td>
+                            <td>Michael Brown</td>
+                            <td>C-103</td>
+                            <td>Hostel Fee</td>
+                            <td>$500</td>
+                            <td>Apr 30, 2025</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="export-options">
+                    <button>Export to Excel</button>
+                    <button>Generate Report</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mess Info Section -->
+        <section id="mess-info" class="content-section">
+            <h2>Mess Information</h2>
+            <div class="mess-schedule">
+                <h3>Mess Timings</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Weekdays</th>
+                            <th>Weekends</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Breakfast</td>
+                            <td>7:00 AM - 9:00 AM</td>
+                            <td>8:00 AM - 10:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Lunch</td>
+                            <td>12:00 PM - 2:00 PM</td>
+                            <td>12:30 PM - 2:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tea</td>
+                            <td>4:30 PM - 5:30 PM</td>
+                            <td>4:30 PM - 5:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Dinner</td>
+                            <td>7:00 PM - 9:00 PM</td>
+                            <td>7:30 PM - 9:30 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mess-menu">
+                <h3>Weekly Mess Menu</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Tea</th>
+                            <th>Dinner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Bread, Eggs, Cereal, Milk, Tea</td>
+                            <td>Rice, Dal, Vegetable Curry, Curd</td>
+                            <td>Biscuits, Tea</td>
+                            <td>Roti, Paneer, Rice, Dal</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Paratha, Yogurt, Fruits, Tea</td>
+                            <td>Rice, Sambar, Vegetable, Papad</td>
+                            <td>Sandwich, Tea</td>
+                            <td>Roti, Mixed Vegetables, Rice, Dal</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Idli, Sambar, Chutney, Tea</td>
+                            <td>Rice, Rajma, Salad, Curd</td>
+                            <td>Pakora, Tea</td>
+                            <td>Roti, Chicken/Paneer, Rice, Dal</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Poha, Fruits, Tea</td>
+                            <td>Rice, Dal, Vegetable, Raita</td>
+                            <td>Biscuits, Tea</td>
+                            <td>Roti, Egg Curry/Mushroom, Rice</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Upma, Fruits, Tea</td>
+                            <td>Rice, Kadhi, Vegetable, Papad</td>
+                            <td>Samosa, Tea</td>
+                            <td>Roti, Fish/Soya, Rice, Dal</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Puri, Aloo, Tea</td>
+                            <td>Rice, Dal, Vegetable, Curd</td>
+                            <td>Cake, Tea</td>
+                            <td>Roti, Mixed Vegetables, Rice, Dal</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Chole Bhature, Tea</td>
+                            <td>Pulao, Raita, Pickle, Ice Cream</td>
+                            <td>Pizza, Tea</td>
+                            <td>Roti, Special Curry, Rice, Dal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mess-feedback">
+                <h3>Mess Feedback</h3>
+                <button>View Feedback</button>
+                <button>Create Feedback Form</button>
+            </div>
+            
+            <div class="mess-attendance">
+                <h3>Mess Attendance</h3>
+                <button>View Attendance Report</button>
+                <button>Mark Absent Students</button>
+            </div>
+            
+            <div class="mess-management">
+                <h3>Mess Management</h3>
+                <button>Edit Menu</button>
+                <button>Manage Suppliers</button>
+                <button>Inventory Management</button>
+            </div>
+        </section>
+
+        <!-- Report an Issue Section -->
+        <section id="report-issue" class="content-section">
+            <h2>Report an Issue</h2>
+            <div class="issue-list">
+                <h3>Recent Issues</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student</th>
+                            <th>Room</th>
+                            <th>Issue Type</th>
+                            <th>Description</th>
+                            <th>Reported On</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ISS001</td>
+                            <td>John Doe</td>
+                            <td>A-101</td>
+                            <td>Plumbing</td>
+                            <td>Water leakage from bathroom sink</td>
+                            <td>May 2, 2025</td>
+                            <td>Pending</td>
+                            <td>
+                                <button>View</button>
+                                <button>Resolve</button>
+                                <button>Assign</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ISS002</td>
+                            <td>Jane Smith</td>
+                            <td>B-202</td>
+                            <td>Electrical</td>
+                            <td>Fan not working</td>
+                            <td>May 1, 2025</td>
+                            <td>In Progress</td>
+                            <td>
+                                <button>View</button>
+                                <button>Resolve</button>
+                                <button>Assign</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ISS003</td>
+                            <td>Michael Brown</td>
+                            <td>C-103</td>
+                            <td>Furniture</td>
+                            <td>Broken chair</td>
+                            <td>Apr 30, 2025</td>
+                            <td>Resolved</td>
+                            <td>
+                                <button>View</button>
+                                <button disabled>Resolve</button>
+                                <button disabled>Assign</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="issue-categories">
+                <h3>Issue Categories</h3>
+                <div class="category-cards">
+                    <div class="category-card">
+                        <h4>Plumbing</h4>
+                        <p>Active: 5 | Resolved: 12</p>
+                    </div>
+                    <div class="category-card">
+                        <h4>Electrical</h4>
+                        <p>Active: 3 | Resolved: 8</p>
+                    </div>
+                    <div class="category-card">
+                        <h4>Furniture</h4>
+                        <p>Active: 2 | Resolved: 15</p>
+                    </div>
+                    <div class="category-card">
+                        <h4>Cleanliness</h4>
+                        <p>Active: 4 | Resolved: 20</p>
+                    </div>
+                    <div class="category-card">
+                        <h4>Room Damage</h4>
+                        <p>Active: 1 | Resolved: 7</p>
+                    </div>
+                    <div class="category-card">
+                        <h4>Others</h4>
+                        <p>Active: 2 | Resolved: 10</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="issue-chat">
+                <h3>Communication</h3>
+                <div class="chat-container">
+                    <div class="chat-messages">
+                        <div class="message student">
+                            <div class="message-header">
+                                <span class="sender">John Doe (A-101)</span>
+                                <span class="time">10:30 AM</span>
+                            </div>
+                            <div class="message-content">
+                                <p>Sir, the water leakage in my bathroom is getting worse. Can someone fix it today?</p>
+                            </div>
+                        </div>
+                        <div class="message warden">
+                            <div class="message-header">
+                                <span class="sender">You</span>
+                                <span class="time">10:35 AM</span>
+                            </div>
+                            <div class="message-content">
+                                <p>I've assigned a plumber to your issue. He will visit between 2-3 PM today.</p>
+                            </div>
+                        </div>
+                        <div class="message student">
+                            <div class="message-header">
+                                <span class="sender">John Doe (A-101)</span>
+                                <span class="time">10:37 AM</span>
+                            </div>
+                            <div class="message-content">
+                                <p>Thank you, sir!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <textarea placeholder="Type your message here..."></textarea>
+                        <button>Send</button>
+                        <button>Attach</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="issue-report">
+                <h3>Report a New Issue</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="issue-type">Issue Type</label>
+                        <select id="issue-type">
+                            <option value="">Select Issue Type</option>
+                            <option value="plumbing">Plumbing</option>
+                            <option value="electrical">Electrical</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="cleanliness">Cleanliness</option>
+                            <option value="room-damage">Room Damage</option>
+                            <option value="washerman">Washerman Service</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-description">Description</label>
+                        <textarea id="issue-description" rows="4" placeholder="Describe the issue in detail..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-location">Location</label>
+                        <input type="text" id="issue-location" placeholder="Enter location (Room No., Common Area, etc.)">
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-priority">Priority</label>
+                        <select id="issue-priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Images</label>
+                        <input type="file" multiple>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit Issue</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Notice Section -->
+        <section id="notice" class="content-section">
+            <h2>Notice Board</h2>
+            <div class="notice-actions">
+                <button>Create New Notice</button>
+                <button>Archive Old Notices</button>
+                <div class="notice-search">
+                    <input type="text" placeholder="Search notices...">
+                    <button>Search</button>
+                </div>
+            </div>
+            
+            <div class="notice-tabs">
+                <button class="tab-btn active">Current Notices</button>
+                <button class="tab-btn">Upcoming Notices</button>
+                <button class="tab-btn">Past Notices</button>
+            </div>
+            
+            <div class="notice-list">
+                <div class="notice-item">
+                    <div class="notice-header">
+                        <h3>Important: Campus Maintenance</h3>
+                        <span class="notice-date">Posted: May 2, 2025</span>
+                    </div>
+                    <div class="notice-content">
+                        <p>Water supply will be interrupted on May 5th from 10 AM to 2 PM due to maintenance work.</p>
+                    </div>
+                    <div class="notice-footer">
+                        <span class="notice-author">Posted by: Admin</span>
+                        <div class="notice-actions">
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Pin to Top</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notice-item">
+                    <div class="notice-header">
+                        <h3>Hostel Inspection</h3>
+                        <span class="notice-date">Posted: May 1, 2025</span>
+                    </div>
+                    <div class="notice-content">
+                        <p>Monthly hostel inspection will be conducted on May 7th. Please ensure your rooms are clean and tidy.</p>
+                    </div>
+                    <div class="notice-footer">
+                        <span class="notice-author">Posted by: Warden</span>
+                        <div class="notice-actions">
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Pin to Top</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notice-item">
+                    <div class="notice-header">
+                        <h3>Cultural Festival</h3>
+                        <span class="notice-date">Posted: Apr 30, 2025</span>
+                    </div>
+                    <div class="notice-content">
+                        <p>Annual cultural festival will be held on May 15-17. All students are encouraged to participate. Registration starts from May 5th.</p>
+                    </div>
+                    <div class="notice-footer">
+                        <span class="notice-author">Posted by: Cultural Committee</span>
+                        <div class="notice-actions">
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Pin to Top</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="create-notice-form">
+                <h3>Create New Notice</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="notice-title">Title</label>
+                        <input type="text" id="notice-title" placeholder="Enter notice title">
+                    </div>
+                    <div class="form-group">
+                        <label for="notice-content">Content</label>
+                        <textarea id="notice-content" rows="4" placeholder="Enter notice content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="notice-valid-from">Valid From</label>
+                        <input type="date" id="notice-valid-from">
+                    </div>
+                    <div class="form-group">
+                        <label for="notice-valid-to">Valid To</label>
+                        <input type="date" id="notice-valid-to">
+                    </div>
+                    <div class="form-group">
+                        <label>Attachments</label>
+                        <input type="file" multiple>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> Pin to Top
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Post Notice</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="content-section">
+            <h2>Hostel Schedule</h2>
+            <div class="schedule-tabs">
+                <button class="tab-btn active">Daily Schedule</button>
+                <button class="tab-btn">Special Events</button>
+                <button class="tab-btn">Holiday Schedule</button>
+            </div>
+            
+            <div class="daily-schedule">
+                <h3>Daily Hostel Routine</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5:30 AM - 6:30 AM</td>
+                            <td>Morning Wake-up</td>
+                            <td>Hostel bell rings at 5:30 AM</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 AM - 9:00 AM</td>
+                            <td>Breakfast</td>
+                            <td>At hostel mess</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 4:00 PM</td>
+                            <td>Academic Hours</td>
+                            <td>Hostel remains closed</td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM - 5:30 PM</td>
+                            <td>Tea Time</td>
+                            <td>At hostel mess</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM - 7:00 PM</td>
+                            <td>Sports/Recreation</td>
+                            <td>At sports ground/common room</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM - 9:00 PM</td>
+                            <td>Dinner</td>
+                            <td>At hostel mess</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 PM - 11:00 PM</td>
+                            <td>Study Hours</td>
+                            <td>Quiet hours enforced</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 PM</td>
+                            <td>Hostel Gates Close</td>
+                            <td>Attendance taken</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="special-events">
+                <h3>Special Events Schedule</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Venue</th>
+                            <th>Coordinator</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>May 10, 2025</td>
+                            <td>6:00 PM - 9:00 PM</td>
+                            <td>Hostel Annual Day</td>
+                            <td>Main Auditorium</td>
+                            <td>Prof. Sarah Williams</td>
+                        </tr>
+                        <tr>
+                            <td>May 15, 2025</td>
+                            <td>5:00 PM - 7:00 PM</td>
+                            <td>Sports Meet</td>
+                            <td>Sports Complex</td>
+                            <td>Coach Anderson</td>
+                        </tr>
+                        <tr>
+                            <td>May 20, 2025</td>
+                            <td>4:00 PM - 6:00 PM</td>
+                            <td>Career Guidance Workshop</td>
+                            <td>Seminar Hall</td>
+                            <td>Dr. James Peterson</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="holiday-schedule">
+                <h3>Holiday Schedule</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>Holiday</th>
+                            <th>Special Arrangements</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>May 12, 2025</td>
+                            <td>Monday</td>
+                            <td>Memorial Day</td>
+                            <td>Special meal at dinner</td>
+                        </tr>
+                        <tr>
+                            <td>May 25, 2025</td>
+                            <td>Sunday</td>
+                            <td>Foundation Day</td>
+                            <td>Cultural program in evening</td>
+                        </tr>
+                        <tr>
+                            <td>June 5, 2025</td>
+                            <td>Thursday</td>
+                            <td>Environment Day</td>
+                            <td>Tree planting activity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="schedule-management">
+                <h3>Schedule Management</h3>
+                <button>Edit Schedule</button>
+                <button>Add Special Event</button>
+                <button>Print Schedule</button>
+            </div>
+        </section>
+
+        <!-- Contact Details Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Details</h2>
+            <div class="contact-categories">
+                <button class="tab-btn active">Emergency</button>
+                <button class="tab-btn">Medical</button>
+                <button class="tab-btn">Maintenance</button>
+                <button class="tab-btn">Administrative</button>
+                <button class="tab-btn">Other Services</button>
+            </div>
+            
+            <div class="emergency-contacts">
+                <h3>Emergency Contacts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contact</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Available Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Security Office</td>
+                            <td>Mr. David Wilson</td>
+                            <td>+1-234-567-8902</td>
+                            <td>security@university.edu</td>
+                            <td>24x7</td>
+                        </tr>
+                        <tr>
+                            <td>Chief Warden</td>
+                            <td>Dr. Robert Johnson</td>
+                            <td>+1-234-567-8901</td>
+                            <td>robert.johnson@university.edu</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Campus Hospital</td>
+                            <td>Dr. Emily Carter</td>
+                            <td>+1-234-567-8903</td>
+                            <td>hospital@university.edu</td>
+                            <td>24x7</td>
+                        </tr>
+                        <tr>
+                            <td>Fire Department</td>
+                            <td>Fire Station</td>
+                            <td>911</td>
+                            <td>-</td>
+                            <td>24x7</td>
+                        </tr>
+                        <tr>
+                            <td>Police</td>
+                            <td>Campus Police</td>
+                            <td>+1-234-567-8904</td>
+                            <td>campus.police@university.edu</td>
+                            <td>24x7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="medical-contacts">
+                <h3>Medical Contacts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contact</th>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Available Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Campus Doctor</td>
+                            <td>Dr. Emily Carter</td>
+                            <td>General Physician</td>
+                            <td>+1-234-567-8905</td>
+                            <td>emily.carter@university.edu</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Campus Nurse</td>
+                            <td>Ms. Linda Brown</td>
+                            <td>Registered Nurse</td>
+                            <td>+1-234-567-8906</td>
+                            <td>linda.brown@university.edu</td>
+                            <td>24x7</td>
+                        </tr>
+                        <tr>
+                            <td>Psychologist</td>
+                            <td>Dr. Mark Taylor</td>
+                            <td>Clinical Psychologist</td>
+                            <td>+1-234-567-8907</td>
+                            <td>mark.taylor@university.edu</td>
+                            <td>10:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Ambulance</td>
+                            <td>Campus Hospital</td>
+                            <td>-</td>
+                            <td>+1-234-567-8908</td>
+                            <td>-</td>
+                            <td>24x7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="maintenance-contacts">
+                <h3>Maintenance Contacts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Contact Person</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Available Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plumbing</td>
+                            <td>Mr. John Smith</td>
+                            <td>+1-234-567-8910</td>
+                            <td>plumbing@university.edu</td>
+                            <td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Electrical</td>
+                            <td>Mr. Michael Davis</td>
+                            <td>+1-234-567-8911</td>
+                            <td>electrical@university.edu</td>
+                            <td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Carpentry</td>
+                            <td>Mr. Tom Wilson</td>
+                            <td>+1-234-567-8912</td>
+                            <td>carpentry@university.edu</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning</td>
+                            <td>Ms. Sarah Johnson</td>
+                            <td>+1-234-567-8913</td>
+                            <td>cleaning@university.edu</td>
+                            <td>7:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Washerman</td>
+                            <td>Mr. Peter Brown</td>
+                            <td>+1-234-567-8914</td>
+                            <td>laundry@university.edu</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>IT Support</td>
+                            <td>Mr. Alex Turner</td>
+                            <td>+1-234-567-8915</td>
+                            <td>it.support@university.edu</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="administrative-contacts">
+                <h3>Administrative Contacts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Contact Person</th>
+                            <th>Designation</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Student Affairs</td>
+                            <td>Dr. Jennifer Adams</td>
+                            <td>Director</td>
+                            <td>+1-234-567-8920</td>
+                            <td>jennifer.adams@university.edu</td>
+                        </tr>
+                        <tr>
+                            <td>Accounts Office</td>
+                            <td>Mr. Richard Parker</td>
+                            <td>Accounts Officer</td>
+                            <td>+1-234-567-8921</td>
+                            <td>richard.parker@university.edu</td>
+                        </tr>
+                        <tr>
+                            <td>Admissions</td>
+                            <td>Ms. Helen Grant</td>
+                            <td>Admissions Officer</td>
+                            <td>+1-234-567-8922</td>
+                            <td>helen.grant@university.edu</td>
+                        </tr>
+                        <tr>
+                            <td>Registrar Office</td>
+                            <td>Dr. Thomas Brown</td>
+                            <td>Registrar</td>
+                            <td>+1-234-567-8923</td>
+                            <td>thomas.brown@university.edu</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="other-services">
+                <h3>Other Services</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Contact Person</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Available Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>Mr. Kevin Miller</td>
+                            <td>+1-234-567-8930</td>
+                            <td>transport@university.edu</td>
+                            <td>7:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Cafeteria</td>
+                            <td>Mr. George Wilson</td>
+                            <td>+1-234-567-8931</td>
+                            <td>cafeteria@university.edu</td>
+                            <td>7:00 AM - 9:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Library</td>
+                            <td>Ms. Laura Fisher</td>
+                            <td>+1-234-567-8932</td>
+                            <td>library@university.edu</td>
+                            <td>8:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sports Complex</td>
+                            <td>Mr. Brian Taylor</td>
+                            <td>+1-234-567-8933</td>
+                            <td>sports@university.edu</td>
+                            <td>6:00 AM - 9:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="add-contact">
+                <h3>Add New Contact</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="contact-category">Category</label>
+                        <select id="contact-category">
+                            <option value="">Select Category</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="medical">Medical</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="administrative">Administrative</option>
+                            <option value="other">Other Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-service">Service/Department</label>
+                        <input type="text" id="contact-service" placeholder="Enter service or department name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-name">Contact Person</label>
+                        <input type="text" id="contact-name" placeholder="Enter contact person name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-designation">Designation</label>
+                        <input type="text" id="contact-designation" placeholder="Enter designation">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="text" id="contact-phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-hours">Available Hours</label>
+                        <input type="text" id="contact-hours" placeholder="Enter available hours">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Add Contact</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Hostel Management System. All rights reserved.</p>
+            <p>Developed by University IT Department</p>
+        </div>
+    </footer>
+
+    <!-- Logout Confirmation Modal -->
+    <div id="logout-modal" class="modal">
+        <div class="modal-content">
+            <h3>Logout Confirmation</h3>
+            <p>Are you sure you want to logout?</p>
+            <div class="modal-buttons">
+                <button id="confirm-logout">Yes, Logout</button>
+                <button id="cancel-logout">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for functionality -->
+    <!-- In warden_dashboard.html, replace the entire <script> tag at the bottom with this -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Basic Setup & Authentication ---
+        const wardenToken = localStorage.getItem('warden_token');
+        if (!wardenToken) {
+            alert('Access Denied. Please login as a warden first.');
+            window.location.href = 'wardenlogin.html';
+            return;
+        }
+        
+        const API_BASE_URL = 'http://localhost:5000';
+
+        // --- Helper for Authenticated API calls ---
+        const fetchWithAuth = (url, options = {}) => {
+            const headers = {
+                'Authorization': 'Bearer ' + wardenToken,
+                'Content-Type': 'application/json',
+                ...options.headers,
+            };
+            return fetch(API_BASE_URL + url, { ...options, headers });
+        };
+        
+        // --- Data Loading & Rendering Functions ---
+        async function loadLeaveApplications() {
+            try {
+                const response = await fetchWithAuth('/warden/leaves');
+                if (!response.ok) throw new Error('Failed to fetch leave data.');
+                const leaves = await response.json();
+                
+                const tableBody = document.querySelector('#home .leave-management .today-leave tbody');
+                tableBody.innerHTML = ''; // Clear static/old data
+                
+                if (leaves.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="7" style="text-align:center;">No pending leave applications.</td></tr>';
+                    return;
+                }
+                
+                leaves.forEach(leave => {
+                    const from = new Date(leave.from_date).toLocaleDateString();
+                    const to = new Date(leave.to_date).toLocaleDateString();
+                    
+                    const oneDay = 24 * 60 * 60 * 1000;
+                    const diffDays = Math.round(Math.abs((new Date(to) - new Date(from)) / oneDay)) + 1;
+                    const durationText = `${diffDays} day(s)`;
+
+                    const statusClass = `status-${leave.status.toLowerCase()}`;
+                    
+                    const row = `
+                        <tr data-id="${leave._id}">
+                            <td>${leave.student_id.slice(-6).toUpperCase()}</td>
+                            <td>${leave.student_name}</td>
+                            <td>${leave.room_no}</td>
+                            <td>${leave.leave_type}</td>
+                            <td>${durationText}</td>
+                            <td><span class="${statusClass}">${leave.status}</span></td>
+                            <td>
+                                ${leave.status === 'Pending' ? `
+                                    <button class="approve-btn">Approve</button>
+                                    <button class="reject-btn">Reject</button>
+                                ` : `
+                                    <button disabled>Approve</button>
+                                    <button disabled>Reject</button>
+                                `}
+                            </td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error("Error loading leave applications:", error);
+                const tableBody = document.querySelector('#home .leave-management .today-leave tbody');
+                tableBody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Error loading data. Please try again.</td></tr>';
+            }
+        }
+        
+        async function handleLeaveAction(leaveId, newStatus) {
+            try {
+                const response = await fetchWithAuth(`/warden/leave/${leaveId}/status`, {
+                    method: 'PUT',
+                    body: JSON.stringify({ status: newStatus })
+                });
+                
+                const result = await response.json();
+                alert(result.message);
+                
+                if (response.ok) {
+                    loadLeaveApplications(); // Refresh the list after action
+                }
+            } catch (error) {
+                console.error("Error updating status:", error);
+                alert("Could not update leave status. Please try again.");
+            }
+        }
+
+        // --- Event Listeners ---
+        document.querySelector('#home .leave-management tbody').addEventListener('click', (e) => {
+            const leaveId = e.target.closest('tr')?.dataset.id;
+            if (!leaveId) return;
+
+            if (e.target.classList.contains('approve-btn')) {
+                if (confirm('Are you sure you want to APPROVE this leave request?')) {
+                    handleLeaveAction(leaveId, 'Approved');
+                }
+            } else if (e.target.classList.contains('reject-btn')) {
+                if (confirm('Are you sure you want to REJECT this leave request?')) {
+                    handleLeaveAction(leaveId, 'Rejected');
+                }
+            }
+        });
+
+        // --- Page Navigation Logic ---
+        const navLinks = document.querySelectorAll('nav a');
+        const contentSections = document.querySelectorAll('.content-section');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                if (targetId === 'logout') {
+                    document.getElementById('logout-modal').style.display = 'block';
+                    return;
+                }
+                contentSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(targetId).classList.add('active');
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // --- Logout Modal Logic ---
+        document.getElementById('confirm-logout').addEventListener('click', () => {
+            localStorage.removeItem('warden_token');
+            window.location.href = 'wardenlogin.html';
+        });
+        document.getElementById('cancel-logout').addEventListener('click', () => {
+            document.getElementById('logout-modal').style.display = 'none';
+        });
+
+        // --- Initial Load ---
+        document.getElementById('home').classList.add('active');
+        document.querySelector('nav a[href="#home"]').classList.add('active');
+        loadLeaveApplications();
+        
+        document.getElementById('current-date-time').textContent = new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    });
+</script>
+</body>
+</html>
